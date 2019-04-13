@@ -3,7 +3,7 @@
     <h1>Hello {{ name }}</h1>
     <BaseInput
       v-model="name"
-      name="first_name"
+      name="name"
       label="First name"
     />
 

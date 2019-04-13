@@ -2,6 +2,10 @@
   <div class="vote">
     <h1>Vote</h1>
     <vote-options :items="voteItems">
+      <template #header>
+        <h3>Amazing voting</h3>
+      </template>
+
       <template #item="{ voteItem }">
         <vote-item :item="voteItem" />
       </template>

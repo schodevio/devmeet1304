@@ -5,8 +5,10 @@
       type="text"
       :value="value"
       v-bind="$attrs"
+      v-validate="'min:3'"
       @input="$emit('input', $event.target.value)"
     >
+    <div>{{ errors.first($attrs.name) }}</div>
   </div>
 </template>
 
