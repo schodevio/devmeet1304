@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
+import store from './store/store'
+
 Vue.use(Router)
 
 const isAdmin = (_to, _from, next) => {
-  const isTokenSet = localStorage.getItem('isTokenSet')
-
-  isTokenSet === 'true' ? next() : next({ name: 'home' })
+  store.getters['UsersStore/isAdmin'] ? next() : next({ name: 'home' })
 }
 
 export default new Router({

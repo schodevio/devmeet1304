@@ -1,5 +1,6 @@
 const initialState = () => ({
-  userId: 33
+  userId: 33,
+  isTokenSet: localStorage.getItem('isTokenSet')
 })
 
 const UsersStore = {
@@ -8,7 +9,8 @@ const UsersStore = {
   state: initialState(),
 
   getters: {
-    userId: state => state.userId
+    userId: state => state.userId,
+    isAdmin: state => state.isTokenSet === 'true'
   }
 }
 
