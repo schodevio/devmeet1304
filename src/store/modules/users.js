@@ -11,6 +11,13 @@ const UsersStore = {
   getters: {
     userId: state => state.userId,
     isAdmin: state => state.isTokenSet === 'true'
+  },
+
+  mutations: {
+    setId(state, id) {
+      state.userId = id
+      return state
+    }
   }
 }
 
