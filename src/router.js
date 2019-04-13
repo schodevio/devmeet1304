@@ -4,6 +4,12 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
+const isAdmin = (_to, _from, next) => {
+  const isTokenSet = localStorage.getItem('isTokenSet')
+
+  isTokenSet === 'true' ? next() : next({ name: 'home' })
+}
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -16,6 +22,7 @@ export default new Router({
     {
       path: '/vote',
       name: 'vote',
+      beforeEnter: isAdmin,
       component: () => import(/* webpackChunkName: "vote" */ './views/Vote.vue')
     },
     {
