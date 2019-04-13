@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'score'
+  name: 'Score'
 }
 </script>

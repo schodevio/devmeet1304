@@ -1,12 +1,23 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link :to="{ name: 'home' }">Home</router-link> |
-      <router-link :to="{ name: 'vote' }">Vote</router-link> |
-      <router-link :to="{ name: 'score' }">Score</router-link> |
-      <router-link :to="{ name: 'settings' }">Settings</router-link>
+      <router-link :to="{ name: 'home' }">
+        Home
+      </router-link> |
+      
+      <router-link :to="{ name: 'vote' }">
+        Vote
+      </router-link> |
+      
+      <router-link :to="{ name: 'score' }">
+        Score
+      </router-link> |
+      
+      <router-link :to="{ name: 'settings' }">
+        Settings
+      </router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
