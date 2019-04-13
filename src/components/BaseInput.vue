@@ -1,7 +1,12 @@
 <template>
   <div class="form-group">
     <label :for="$attrs.name">{{ label }}</label>
-    <input type="text" :value="value" v-bind="$attrs" @input="$emit('input', $event.target.value)" />
+    <input 
+      type="text"
+      :value="value"
+      v-bind="$attrs"
+      @input="$emit('input', $event.target.value)"
+    >
   </div>
 </template>
 
@@ -15,7 +20,8 @@ export default {
       required: true
     },
     value: {
-      type: String
+      type: String,
+      default: ''
     }
   }
 }
